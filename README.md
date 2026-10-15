@@ -103,14 +103,95 @@ sehingga lebih hemat tempat, misalnya pilihan program studi atau kota tujuan. Se
 JRadioButton lebih cocok jika pilihannya sedikit dan ingin ditampilkan langsung, seperti
 pilihan kelas tiket Ekonomi, Bisnis, dan Eksekutif.]
 
-**3. [Pertanyaan refleksi keempat]**
+**4. [Pertanyaan refleksi keempat]**
 
 Jawaban: [Karena initComponents() merupakan kode yang dibuat otomatis oleh GUI Builder
 NetBeans. Jika diedit langsung, perubahan bisa tertimpa ketika tampilan diubah melalui tab
 Design. Kode tambahan seperti event dan method dapat ditulis di luar blok initComponents(), misalnya pada constructor, event handler, atau method bantuan.]
 
-**3. [Pertanyaan refleksi kelima]**
+**5. [Pertanyaan refleksi kelima]**
 
 Jawaban: [Karena FlatLightLaf perlu dipasang terlebih dahulu agar tampilan komponen Swing
 menggunakan tema FlatLaf sejak awal form dibuat. Jika dipanggil setelah form dibuat,
 tampilan awal form bisa belum menggunakan tema yang diinginkan.]
+
+
+## P04 – Layout Manager dan Desain Form
+
+### 1. Hasil Praktikum
+
+#### a. Tampilan Awal Form
+
+Screenshot berikut menunjukkan tampilan awal form sebelum diperlebar.
+
+![Tampilan Awal Form](p04-layout-manager/screenshots/tampilanAwal.png)
+
+#### b. Tampilan Form Setelah Diperlebar
+
+Screenshot berikut menunjukkan tampilan form setelah ukurannya diperlebar.
+
+![Tampilan Form Setelah Diperlebar](p04-layout-manager/screenshots/sesudah-dilebarkan.png)
+
+### 2. Perancangan Layout
+
+#### a. Sketsa Tahap 1
+
+![Sketsa Tahap 1](p04-layout-manager/screenshots/sketsa-tahap1.jpeg)
+
+#### b. Tabel Rancangan Tahap 2
+
+![Tabel Rancangan Tahap 2](p04-layout-manager/screenshots/tabelRancangan.png)
+
+#### c. Design Navigator
+
+![Tampilan Design Navigator](p04-layout-manager/screenshots/tampilan-design-navigator.png)
+
+### 3. Jawaban Eksperimen Praktikum 2
+
+#### Eksperimen 1 – FlowLayout
+
+Jawaban: FlowLayout mengatur komponen secara berurutan dari kiri ke kanan. Jika ruang pada baris tidak cukup, komponen akan berpindah ke baris berikutnya. Posisi komponen juga dapat diatur, misalnya rata tengah menggunakan `FlowLayout.CENTER`.
+
+#### Eksperimen 2 – GridLayout
+
+Jawaban: GridLayout membagi area menjadi baris dan kolom dengan ukuran sel yang sama. Jika jumlah baris diatur menjadi 0 dan jumlah kolom menjadi 2, komponen akan disusun dalam dua kolom. Untuk sembilan tombol, susunannya menjadi lima baris dengan satu sel tersisa pada baris terakhir.
+
+#### Eksperimen 3 – BoxLayout
+
+Jawaban: BoxLayout menyusun komponen secara vertikal atau horizontal sesuai arah yang ditentukan. Ukuran dan posisi komponen dapat dipengaruhi oleh ukuran komponen serta pengaturan alignment. Jarak antarkomponen dapat diatur agar tampilan lebih rapi.
+
+### 4. Jawaban Eksperimen Praktikum 4
+
+#### Eksperimen 1 – Weight X
+
+Jawaban: Nilai `weightx` menentukan bagaimana ruang horizontal tambahan dibagikan kepada komponen. Jika `weightx` bernilai 0, komponen tidak mendapatkan bagian ruang horizontal tambahan berdasarkan nilai tersebut.
+
+#### Eksperimen 2 – Posisi formPanel
+
+Jawaban: Penempatan `formPanel` pada bagian `NORTH` membuat panel berada di bagian atas container. Jika ditempatkan pada bagian `CENTER`, panel berada di area tengah dan dapat memanfaatkan ruang yang tersedia sesuai pengaturan layout.
+
+#### Eksperimen 3 – Minimum Size
+
+Jawaban: Pengaturan ukuran minimum memengaruhi ukuran terkecil yang dapat digunakan oleh komponen atau panel. Jika batas ukuran minimum dihilangkan, ukuran komponen dapat menyesuaikan aturan layout dan ukuran container, sehingga tampilannya bisa berubah.
+
+### 5. Refleksi Bagian G
+
+**1. Apa perbedaan FlowLayout, BorderLayout, dan GridLayout?**
+
+Jawaban: FlowLayout menyusun komponen secara berurutan dari kiri ke kanan. BorderLayout membagi container menjadi lima bagian, yaitu North, South, East, West, dan Center. GridLayout menyusun komponen dalam bentuk baris dan kolom dengan ukuran sel yang sama.
+
+**2. Apa yang terjadi jika jumlah baris pada GridLayout diatur menjadi 0?**
+
+Jawaban: Jika jumlah baris diatur menjadi 0, jumlah baris akan menyesuaikan jumlah komponen berdasarkan jumlah kolom yang ditentukan.
+
+**3. Apa fungsi weightx dan weighty pada GridBagConstraints?**
+
+Jawaban: `weightx` mengatur pembagian ruang horizontal tambahan, sedangkan `weighty` mengatur pembagian ruang vertikal tambahan kepada komponen.
+
+**4. Mengapa pengaturan layout penting dalam pembuatan antarmuka?**
+
+Jawaban: Pengaturan layout membantu menyusun komponen agar rapi dan teratur. Layout juga membantu tampilan menyesuaikan ukuran container sehingga antarmuka lebih mudah digunakan.
+
+**5. Apa fungsi Design Navigator pada NetBeans?**
+
+Jawaban: Design Navigator membantu melihat susunan komponen yang terdapat pada form. Dengan fitur ini, komponen lebih mudah ditemukan dan dipilih saat merancang antarmuka menggunakan GUI Builder.
