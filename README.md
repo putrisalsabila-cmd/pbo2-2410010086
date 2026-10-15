@@ -77,18 +77,40 @@ Screenshot berikut menunjukkan tampilan Form Pemesanan Tiket Travel saat dijalan
 
 Screenshot berikut memperlihatkan tab Design pada `FormTiketTravel`, termasuk jendela Navigator yang menampilkan komponen form.
 
-![Design FormTiketTravel dengan Navigator](p03-komponen-gui/screenshots/tampilanDesign.png)
+![Design FormTiketTravel dengan Navigator](p03-komponen-gui/screenshot/tampilanDesign.png)
 
 ### 3. Refleksi Bagian G
 
 **1. [Pertanyaan refleksi pertama]**
 
-Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
+Jawaban: [Top-level container adalah wadah utama untuk menampilkan sebuah aplikasi,
+contohnya JFrame. Intermediate container digunakan untuk mengelompokkan komponen
+lain, contohnya JPanel. Sedangkan atomic component adalah komponen yang langsung
+digunakan untuk menerima input atau menampilkan informasi, contohnya JButton atau
+JLabel.
+]
 
 **2. [Pertanyaan refleksi kedua]**
 
-Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
+Jawaban: [Karena JRadioButton yang berada dalam ButtonGroup yang sama hanya dapat
+memilih satu pilihan pada satu waktu. Contohnya pada pilihan jenis kelamin, pengguna
+hanya bisa memilih Laki-laki atau Perempuan, bukan keduanya sekaligus.]
 
-**3. [Pertanyaan refleksi berikutnya, jika ada]**
+**3. [Pertanyaan refleksi ketiga]**
 
-Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
+Jawaban: [JComboBox lebih cocok digunakan ketika pilihan yang tersedia cukup banyak
+sehingga lebih hemat tempat, misalnya pilihan program studi atau kota tujuan. Sedangkan
+JRadioButton lebih cocok jika pilihannya sedikit dan ingin ditampilkan langsung, seperti
+pilihan kelas tiket Ekonomi, Bisnis, dan Eksekutif.]
+
+**3. [Pertanyaan refleksi keempat]**
+
+Jawaban: [Karena initComponents() merupakan kode yang dibuat otomatis oleh GUI Builder
+NetBeans. Jika diedit langsung, perubahan bisa tertimpa ketika tampilan diubah melalui tab
+Design. Kode tambahan seperti event dan method dapat ditulis di luar blok initComponents(), misalnya pada constructor, event handler, atau method bantuan.]
+
+**3. [Pertanyaan refleksi kelima]**
+
+Jawaban: [Karena FlatLightLaf perlu dipasang terlebih dahulu agar tampilan komponen Swing
+menggunakan tema FlatLaf sejak awal form dibuat. Jika dipanggil setelah form dibuat,
+tampilan awal form bisa belum menggunakan tema yang diinginkan.]
