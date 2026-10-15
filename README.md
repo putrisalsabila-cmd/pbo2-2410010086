@@ -55,3 +55,40 @@ Jawaban: [Saat program dijalankan, akan terjadi IllegalArgumentException dengan 
 
 #### Eksperimen 4
 Jawaban: [Hal tersebut melanggar encapsulation dan aturan bisnis peminjaman, karena status koleksi dapat diubah langsung dari luar class tanpa melalui method pinjam() atau kembalikan(). Seharusnya perubahan status dikendalikan oleh class Koleksi.]
+
+
+## P03 – Komponen GUI
+
+### 1. Hasil Form Pemesanan Tiket Travel
+
+#### a. Tema Terang
+
+Screenshot berikut menunjukkan tampilan Form Pemesanan Tiket Travel saat dijalankan menggunakan tema terang.
+
+![Form Pemesanan Tiket Travel - Tema Terang](p03-komponen-gui/screenshot/modeTerang.png)
+
+#### b. Tema Gelap
+
+Screenshot berikut menunjukkan tampilan Form Pemesanan Tiket Travel saat dijalankan menggunakan tema gelap.
+
+![Form Pemesanan Tiket Travel - Tema Gelap](p03-komponen-gui/screenshot/modeGelap.png)
+
+### 2. Tampilan Design FormTiketTravel
+
+Screenshot berikut memperlihatkan tab Design pada `FormTiketTravel`, termasuk jendela Navigator yang menampilkan komponen form.
+
+![Design FormTiketTravel dengan Navigator](p03-komponen-gui/screenshots/tampilanDesign.png)
+
+### 3. Refleksi Bagian G
+
+**1. [Pertanyaan refleksi pertama]**
+
+Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
+
+**2. [Pertanyaan refleksi kedua]**
+
+Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
+
+**3. [Pertanyaan refleksi berikutnya, jika ada]**
+
+Jawaban: [Isi jawaban singkat sesuai pertanyaan.]
