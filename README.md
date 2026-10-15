@@ -10,7 +10,7 @@ Program `HaloPBO2` dibuat sebagai latihan awal untuk menampilkan keluaran progra
 
 **Screenshot keluaran program:**
 
-![Screenshot HaloPBO2](screenshots/halo-pbo2.png)
+![Screenshot HaloPBO2](p01-halo-java/screenshots/outputHaloPbo2.png)
 
 #### b. Program KartuMahasiswa
 
@@ -18,7 +18,7 @@ Program `KartuMahasiswa` dibuat untuk menampilkan informasi kartu mahasiswa mela
 
 **Screenshot keluaran program:**
 
-![Screenshot KartuMahasiswa](screenshots/kartu-mahasiswa.png)
+![Screenshot HaloPBO2](p01-halo-java/screenshots/kartuMahasiswa.png)
 
 ### 2. Riwayat Commit Git
 
@@ -26,7 +26,6 @@ Riwayat commit digunakan untuk melihat perubahan yang telah disimpan pada reposi
 
 **Screenshot hasil perintah `git log --oneline`:**
 
-![Screenshot HaloPBO2](screenshots/halo-pbo2.png)
-![Screenshot Git Log](screenshots/git-log.png)
+![Screenshot HaloPBO2](p01-halo-java/screenshots/git log --.png)
 
 Screenshot menunjukkan riwayat commit repository dengan minimal dua commit.
