@@ -35,17 +35,12 @@ Screenshot menunjukkan riwayat commit repository dengan minimal dua commit.
 
 ### 1. Hasil Keluaran Program
 
-#### a. Pencarian Buku Skripsi
+#### a. Pencarian dan peminjaman Buku Skripsi 
 
 Screenshot berikut menunjukkan keluaran program ketika melakukan pencarian buku dengan judul `Skripsi`.
 
 ![Hasil Pencarian Buku Skripsi](p02-perpustakaan-mini/dokumentasi/outputpo2.png)
 
-#### b. Percobaan Meminjam Buku Skripsi
-
-Screenshot berikut menunjukkan keluaran program ketika mencoba melakukan peminjaman buku `Skripsi`.
-
-![Percobaan Meminjam Buku Skripsi](p02-perpustakaan-mini/screenshots/peminjaman-skripsi.png)
 
 ### 2. Jawaban Eksperimen Praktikum 6
 
