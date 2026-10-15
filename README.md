@@ -195,3 +195,7 @@ Jawaban: Pengaturan layout membantu menyusun komponen agar rapi dan teratur. Lay
 **5. Apa fungsi Design Navigator pada NetBeans?**
 
 Jawaban: Design Navigator membantu melihat susunan komponen yang terdapat pada form. Dengan fitur ini, komponen lebih mudah ditemukan dan dipilih saat merancang antarmuka menggunakan GUI Builder.
+
+### Deklarasi Penggunaan AI p04
+
+Dalam pengerjaan praktikum ini, saya menggunakan AI sebagai alat bantu untuk memahami materi, mencari referensi penjelasan, dan membantu menyusun dokumentasi pada README. Seluruh proses pengerjaan dan penyesuaian program dilakukan sesuai dengan materi praktikum yang dipelajari.
