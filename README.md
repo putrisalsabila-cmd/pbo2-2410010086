@@ -26,6 +26,6 @@ Riwayat commit digunakan untuk melihat perubahan yang telah disimpan pada reposi
 
 **Screenshot hasil perintah `git log --oneline`:**
 
-![Screenshot HaloPBO2](p01-halo-java/screenshot/git log --.png)
+![Screenshot HaloPBO2](p01-halo-java/screenshot/gitLog--.png)
 
 Screenshot menunjukkan riwayat commit repository dengan minimal dua commit.
