@@ -150,7 +150,7 @@ Screenshot berikut menunjukkan tampilan form setelah ukurannya diperlebar.
 
 Penilaian dilakukan untuk memeriksa tampilan Form Anggota Perpustakaan berdasarkan kriteria yang terdapat pada modul Praktikum P04. Pemeriksaan meliputi susunan label, pengelompokan isian, penggunaan placeholder, kesesuaian komponen, posisi tombol, jarak antar komponen, tampilan saat ukuran jendela berubah, serta penggunaan Layout Manager.
 
-![Hasil Penilaian Teman](screenshots/tabel-penilaian.png)
+![Hasil Penilaian Teman](p04-layout-manager/screenshots/tabel-penilaian.png)
 
 **Saran Perbaikan:**
 
