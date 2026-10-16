@@ -146,6 +146,16 @@ Screenshot berikut menunjukkan tampilan form setelah ukurannya diperlebar.
 
 ![Tampilan Design Navigator](p04-layout-manager/screenshots/tampilan-design-navigator.png)
 
+#### d. Hasil penilaian teman - Elvira Eri Saputri - 2410010461
+
+Penilaian dilakukan untuk memeriksa tampilan Form Anggota Perpustakaan berdasarkan kriteria yang terdapat pada modul Praktikum P04. Pemeriksaan meliputi susunan label, pengelompokan isian, penggunaan placeholder, kesesuaian komponen, posisi tombol, jarak antar komponen, tampilan saat ukuran jendela berubah, serta penggunaan Layout Manager.
+
+![Hasil Penilaian Teman](screenshots/tabel-penilaian.png)
+
+**Saran Perbaikan:**
+
+Tambahkan placeholder pada isian yang memerlukan format pengisian agar memudahkan pengguna saat mengisi form.
+
 ### 3. Jawaban Eksperimen Praktikum 2
 
 #### Eksperimen 1 – FlowLayout
@@ -199,3 +209,4 @@ Jawaban: Design Navigator membantu melihat susunan komponen yang terdapat pada f
 ### Deklarasi Penggunaan AI p04
 
 Dalam pengerjaan praktikum ini, saya menggunakan AI sebagai alat bantu untuk memahami materi, mencari referensi penjelasan, dan membantu menyusun dokumentasi pada README. Seluruh proses pengerjaan dan penyesuaian program dilakukan sesuai dengan materi praktikum yang dipelajari.
+
