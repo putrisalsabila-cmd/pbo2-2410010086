@@ -88,9 +88,11 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         headerPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
         headerPanel.setLayout(new javax.swing.BoxLayout(headerPanel, javax.swing.BoxLayout.Y_AXIS));
 
+        judulLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         judulLabel.setText("Form Anggota Perpustakaan");
         headerPanel.add(judulLabel);
 
+        subJudulLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         subJudulLabel.setText("Pendaftaran anggota baru");
         headerPanel.add(subJudulLabel);
 
