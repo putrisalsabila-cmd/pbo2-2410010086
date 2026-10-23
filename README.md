@@ -228,7 +228,7 @@ Dalam pengerjaan praktikum ini, saya menggunakan AI sebagai alat bantu untuk mem
 
 Bukti tabel pengamatan:
 
-![Tabel pengamatan Praktikum 2](screenshots/table-pengamatan-p2.png)
+![Tabel pengamatan Praktikum 2](p05-event-handling/screenshots/table-pengamatan-p2.png)
 
 ## 2. Jawaban Eksperimen Praktikum 3 — Konversi Suhu
 
@@ -280,19 +280,19 @@ Pengaturan `defaultCloseOperation` pada form menggunakan `DO_NOTHING_ON_CLOSE` a
 
 Screenshot berikut menunjukkan pengaturan event pada tombol Daftar di jendela Properties NetBeans.
 
-![Properties Events tombol Daftar](screenshots/events-daftarbutton.png)
+![Properties Events tombol Daftar](p05-event-handling/screenshots/events-daftarbutton.png)
 
 ### 5.2 Dialog Ringkasan
 
 Dialog ringkasan menampilkan data anggota yang dimasukkan melalui form setelah tombol Daftar diklik.
 
-![Dialog ringkasan](screenshots/dialog-rigkasan.png)
+![Dialog ringkasan](p05-event-handling/screenshots/dialog-rigkasan.png)
 
 ### 5.3 Dialog Konfirmasi Keluar
 
 Dialog konfirmasi muncul ketika pengguna menekan tombol X pada jendela. Pilihan Yes digunakan untuk menutup form, sedangkan No membuat form tetap terbuka.
 
-![Dialog konfirmasi keluar](screenshots/dialog-konfirmasi.png)
+![Dialog konfirmasi keluar](p05-event-handling/screenshots/dialog-konfirmasi.png)
 
 ## 6. Deklarasi Penggunaan AI
 
