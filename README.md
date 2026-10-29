@@ -210,3 +210,93 @@ Jawaban: Design Navigator membantu melihat susunan komponen yang terdapat pada f
 
 Dalam pengerjaan praktikum ini, saya menggunakan AI sebagai alat bantu untuk memahami materi, mencari referensi penjelasan, dan membantu menyusun dokumentasi pada README. Seluruh proses pengerjaan dan penyesuaian program dilakukan sesuai dengan materi praktikum yang dipelajari.
 
+
+# P05 — Event Handling
+
+## 1. Tabel Pengamatan Praktikum 2
+
+| No. | Tindakan | Event yang tercatat |
+|---|---|---|
+| 1 | Mengarahkan kursor ke tombol, lalu menjauhkannya | `mouseEntered` ketika kursor masuk dan `mouseExited` ketika kursor keluar |
+| 2 | Mengklik tombol Klik saya | `actionPerformed` |
+| 3 | Mencentang lalu menghapus centang Aktifkan fitur | `itemStateChanged` setiap kali status centang berubah |
+| 4 | Mengganti pilihan dari Pagi menjadi Malam | `itemStateChanged` untuk pilihan yang berubah, termasuk status pilihan lama dan pilihan baru |
+| 5 | Mengklik isian, lalu mengetik kata "abc" | `focusGained` ketika isian mendapat fokus dan `keyTyped` ketika karakter diketik |
+| 6 | Mengklik tombol setelah mengetik di isian | `focusLost` ketika isian kehilangan fokus dan `actionPerformed` ketika tombol diklik |
+
+**Catatan:** Urutan event dapat berbeda sesuai interaksi pengguna. Tabel akhir disesuaikan dengan catatan yang benar-benar muncul pada `logArea`.
+
+Bukti tabel pengamatan:
+
+![Tabel pengamatan Praktikum 2](p05-event-handling/screenshots/table-pengamatan-p2.png)
+
+## 2. Jawaban Eksperimen Praktikum 3 — Konversi Suhu
+
+### Eksperimen 1: Menghapus pemeriksaan `ItemEvent.SELECTED`
+
+Jika pemeriksaan `evt.getStateChange() == ItemEvent.SELECTED` dihapus, pesan `item berubah` akan tercetak **dua kali** ketika pilihan Combo Box diganti, karena event dipanggil untuk pilihan lama yang dilepas dan pilihan baru yang dipilih.
+
+### Eksperimen 2: Mengganti `keyReleased` menjadi `keyPressed`
+
+Hasil terlihat terlambat satu karakter karena `keyPressed` terjadi sebelum karakter dimasukkan ke dalam teks. Akibatnya, metode `konversi()` membaca isi isian sebelum karakter terbaru ditambahkan.
+
+### Eksperimen 3: Menghapus blok `try-catch`
+
+Ketika huruf dimasukkan, `Double.parseDouble()` tidak dapat mengubah teks tersebut menjadi angka. Akibatnya, terjadi `NumberFormatException` dan pesan error atau stack trace ditampilkan pada jendela Output jika exception tidak ditangani.
+
+## 3. Jawaban Eksperimen Praktikum 4 — Kalkulator Sederhana
+
+### Eksperimen 1: Membuat event tombol kali dua kali
+
+Jika event `actionPerformed` dibuat melalui GUI Builder sementara lambda pada konstruktor tetap digunakan, satu klik dapat menjalankan kedua listener. Pesan `kali` akan tercetak dua kali apabila perintah tersebut ditambahkan pada kedua listener.
+
+Sebaiknya satu tombol hanya memakai satu cara penanganan event agar perhitungan tidak dijalankan berulang kali.
+
+### Eksperimen 2: Menambahkan tombol modulus (%)
+
+Perubahan yang dilakukan pada tab Design adalah menambahkan tombol `%` pada panel operator dan mengatur teks serta nama variabel tombol tersebut.
+
+Pada tab Source, tambahkan event untuk tombol `%`, lalu tambahkan logika operasi modulus pada metode `hitung()`. Operasi modulus menggunakan operator `%` untuk memperoleh sisa pembagian. Contohnya, `10 % 3` menghasilkan `1`.
+
+### Eksperimen 3: Kursor setelah tombol Hapus ditekan
+
+Kursor langsung kembali ke isian angka pertama karena metode `hapus()` menjalankan `angka1Field.requestFocusInWindow()`. Perintah ini meminta agar isian angka pertama kembali mendapatkan fokus sehingga pengguna dapat langsung mengetik angka baru.
+
+## 4. Peta Event Form Anggota Perpustakaan
+
+| No. | Komponen | Event | Fungsi |
+|---|---|---|---|
+| 1 | `persetujuanCheckBox` | `itemStateChanged` | Mengaktifkan tombol Daftar jika persetujuan dicentang dan menonaktifkannya jika centang dihapus |
+| 2 | `batalBtn` | `actionPerformed` | Mengosongkan seluruh isian, menghapus pilihan, dan mengembalikan fokus ke NPM |
+| 3 | `daftarBtn` | `actionPerformed` | Menampilkan ringkasan data anggota melalui `JOptionPane` |
+| 4 | `npmField` | `keyReleased` | Memperbarui jumlah digit NPM yang telah dimasukkan |
+| 5 | `FormAnggotaPerpustakaan` | `windowClosing` | Menampilkan dialog konfirmasi sebelum form ditutup |
+
+Pengaturan `defaultCloseOperation` pada form menggunakan `DO_NOTHING_ON_CLOSE` agar jendela tidak langsung tertutup sebelum pengguna memberikan konfirmasi.
+
+## 5. Bukti Tangkapan Layar
+
+### 5.1 Properties — Events Tombol Daftar
+
+Screenshot berikut menunjukkan pengaturan event pada tombol Daftar di jendela Properties NetBeans.
+
+![Properties Events tombol Daftar](p05-event-handling/screenshots/events-daftarbutton.png)
+
+### 5.2 Dialog Ringkasan
+
+Dialog ringkasan menampilkan data anggota yang dimasukkan melalui form setelah tombol Daftar diklik.
+
+![Dialog ringkasan](p05-event-handling/screenshots/dialog-rigkasan.png)
+
+### 5.3 Dialog Konfirmasi Keluar
+
+Dialog konfirmasi muncul ketika pengguna menekan tombol X pada jendela. Pilihan Yes digunakan untuk menutup form, sedangkan No membuat form tetap terbuka.
+
+![Dialog konfirmasi keluar](p05-event-handling/screenshots/dialog-konfirmasi.png)
+
+## 6. Deklarasi Penggunaan AI
+
+Dalam pengerjaan praktikum ini, saya menggunakan **ChatGPT dari OpenAI** sebagai alat bantu untuk memahami materi event handling, memeriksa logika event pada form, membantu menyusun jawaban eksperimen, serta merapikan dokumentasi README.
+
+Kode program, hasil pengamatan, dan tangkapan layar tetap diperiksa berdasarkan implementasi dan pengujian yang dilakukan pada aplikasi NetBeans.
+
