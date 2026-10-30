@@ -306,7 +306,7 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 4, 6, 12);
         formPanel.add(npmLabel, gridBagConstraints);
 
-        npmField.setToolTipText("");
+        npmField.setToolTipText("Masukkan NPM berupa 10 digit angka");
         npmField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 npmFieldFocusLost(evt);
