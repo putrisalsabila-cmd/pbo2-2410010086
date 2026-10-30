@@ -300,3 +300,56 @@ Dalam pengerjaan praktikum ini, saya menggunakan **ChatGPT dari OpenAI** sebagai
 
 Kode program, hasil pengamatan, dan tangkapan layar tetap diperiksa berdasarkan implementasi dan pengujian yang dilakukan pada aplikasi NetBeans.
 
+# P06 – Validasi Input dan Kegunaan
+
+## 1. Foto atau Pindaian Lembar Peer Review
+
+Lembar peer review dari Elvira Eri Saputri dapat dilihat melalui tautan berikut:
+
+[Lihat Screenshot Peer Review](p06-validasi-input/screenshots/peer-review.png)
+
+## 2. Tabel Temuan, Perbaikan, dan Commit
+
+| Temuan dari Teman | Perbaikan yang Dilakukan | Commit |
+|---|---|---|
+| Penerapan mnemonic dan `labelFor` belum konsisten pada seluruh komponen. | Menambahkan mnemonic dan menghubungkan setiap label dengan komponen isian menggunakan `labelFor` secara konsisten. | Update P06: validasi input dan peer review |
+| Pilihan Program Studi masih dapat dianggap valid saat kosong dan Jenis Anggota belum diwajibkan untuk dipilih. | Menambahkan validasi agar Program Studi dan Jenis Anggota wajib dipilih sebelum pendaftaran diproses. | Update P06: validasi input dan peer review |
+| Akses keyboard melalui mnemonic belum diterapkan pada seluruh tombol dan label. | Melengkapi mnemonic pada tombol dan label yang diperlukan agar dapat diakses menggunakan keyboard. | Update P06: validasi input dan peer review |
+
+## 3. Screenshot Form dengan Pesan Kesalahan
+
+[Lihat Screenshot Pesan Kesalahan](p06-validasi-input/screenshots/sesudah-data-salah.png)
+
+## 4. Screenshot Jendela Navigator
+
+[Lihat Screenshot Jendela Navigator](p06-validasi-input/screenshots/navigator.png)
+
+## 5. Jawaban Eksperimen Praktikum 4
+
+**1. Ketik huruf pada isian NPM. Apa yang terjadi dan baris mana di `npmFieldKeyTyped` yang menyebabkannya?**
+
+Huruf tidak dapat dimasukkan ke dalam isian NPM karena isian tersebut hanya menerima angka. Hal ini disebabkan oleh kondisi `!Character.isDigit(evt.getKeyChar())` yang memeriksa karakter. Jika karakter bukan angka, `evt.consume()` membatalkan input tersebut.
+
+**2. Isi email dengan `siti@`, lalu tekan Tab. Kapan pesan kesalahan muncul?**
+
+Pesan kesalahan muncul ketika isian email kehilangan fokus setelah tombol Tab ditekan. Hal ini terjadi karena event `focusLost` memanggil method `periksaEmail()` untuk memeriksa format email.
+
+**3. Klik isian Nama tanpa mengetik, lalu tekan Tab. Mengapa tidak ada pesan kesalahan?**
+
+Tidak ada pesan kesalahan karena pada event `focusLost` terdapat kondisi `if (!namaField.getText().isBlank())`. Artinya, validasi hanya dilakukan jika isian Nama tidak kosong. Isian kosong baru diperiksa ketika tombol Daftar diklik.
+
+**4. Centang persetujuan, lalu klik Daftar dengan form kosong. Isian mana yang mendapat fokus?**
+
+Isian NPM mendapat fokus karena menjadi isian pertama yang diperiksa dan mengalami kesalahan. Program menyimpan isian yang tidak valid ke dalam daftar, kemudian mengarahkan fokus ke kesalahan pertama menggunakan `salah.get(0).requestFocusInWindow()`.
+
+**5. Tekan tombol Alt bersama huruf N. Isian mana yang mendapat fokus, dan properti apa yang mengaturnya?**
+
+Isian Nama mendapat fokus melalui mnemonic pada label Nama. Properti `displayedMnemonic` digunakan untuk menentukan huruf pintasan, sedangkan `labelFor` menghubungkan label dengan komponen isian.
+
+**6. Isi beberapa isian, lalu klik Batal dan pilih No. Apakah data tetap ada?**
+
+Ya, data yang sudah diisi tetap ada karena ketika pengguna memilih No, method `batal()` menjalankan `return` sehingga proses mengosongkan form tidak dilanjutkan.
+
+## 6. Deklarasi Penggunaan AI
+
+AI yang digunakan adalah ChatGPT. AI dimanfaatkan untuk membantu memahami materi praktikum, memeriksa kode program, memberikan saran perbaikan berdasarkan hasil peer review, dan membantu menyusun dokumentasi README.
