@@ -306,7 +306,8 @@ Kode program, hasil pengamatan, dan tangkapan layar tetap diperiksa berdasarkan 
 
 Lembar peer review dari Elvira Eri Saputri dapat dilihat melalui tautan berikut:
 
-[Lihat Screenshot Peer Review](p06-validasi-input/screenshots/peer-review.png)
+![Lihat Screenshot Peer Review](p06-validasi-input/screenshots/peer-review.png)
+
 
 ## 2. Tabel Temuan, Perbaikan, dan Commit
 
@@ -318,11 +319,11 @@ Lembar peer review dari Elvira Eri Saputri dapat dilihat melalui tautan berikut:
 
 ## 3. Screenshot Form dengan Pesan Kesalahan
 
-[Lihat Screenshot Pesan Kesalahan](p06-validasi-input/screenshots/sesudah-data-salah.png)
+![Lihat Screenshot Pesan Kesalahan](p06-validasi-input/screenshots/sesudah-data-salah.png)
 
 ## 4. Screenshot Jendela Navigator
 
-[Lihat Screenshot Jendela Navigator](p06-validasi-input/screenshots/navigator.png)
+![Lihat Screenshot Jendela Navigator](p06-validasi-input/screenshots/navigator.png)
 
 ## 5. Jawaban Eksperimen Praktikum 4
 
