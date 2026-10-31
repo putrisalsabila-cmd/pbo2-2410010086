@@ -354,3 +354,42 @@ Ya, data yang sudah diisi tetap ada karena ketika pengguna memilih No, method `b
 ## 6. Deklarasi Penggunaan AI
 
 AI yang digunakan adalah ChatGPT. AI dimanfaatkan untuk membantu memahami materi praktikum, memeriksa kode program, memberikan saran perbaikan berdasarkan hasil peer review, dan membantu menyusun dokumentasi README.
+
+
+# P07 – Tabel dan Menu
+
+## Jawaban Eksperimen Praktikum 5
+
+**1. Apakah tabel langsung berubah setelah `fireTableRowsInserted(baris, baris);` dijadikan komentar?**
+
+Tidak. Data memang bertambah, tetapi tabel tidak langsung diperbarui karena tidak menerima pemberitahuan perubahan dari model.
+
+**2. Nama siapa yang muncul saat Ahmad Fauzi dipilih lalu klik Hapus dan pilih No?**
+
+Nama yang muncul adalah Budi Santoso. Hal ini karena nomor baris yang terlihat berbeda dengan nomor baris pada model.
+
+**3. Apa yang terjadi jika dialog diubah menjadi tidak modal (`false`)?**
+
+Jendela utama tetap bisa diklik saat dialog terbuka. Akibatnya, proses penambahan kontak bisa berjalan sebelum dialog selesai diisi.
+
+**4. Mengapa Ctrl+E dan Ctrl+D tidak bekerja saat tidak ada baris yang dipilih?**
+
+Karena tombol Ubah dan Hapus hanya aktif jika ada baris yang dipilih. Sedangkan tombol Tambah selalu aktif.
+
+**5. Baris apa yang berubah di `initComponents()` setelah accelerator Hapus diubah menjadi Delete?**
+
+Baris `hapusItem.setAccelerator()` berubah dari kombinasi Ctrl+D menjadi tombol Delete tanpa Ctrl.
+
+**6. Apa error yang muncul jika model dibuat setelah `initComponents()`?**
+
+Terjadi `NullPointerException` karena model belum dibuat saat `initComponents()` menggunakannya.
+
+# P07 – Mini Proyek Katalog Buku Perpustakaan
+
+## Video Demo
+
+[Klik di sini untuk menonton video demo Katalog Buku](https://drive.google.com/file/d/1dWDA7ix2HWB9ViZ6Y2DoinU34cQeukQn/view?usp=sharing)
+
+## Deklarasi Penggunaan AI
+
+AI yang digunakan adalah ChatGPT. AI dimanfaatkan untuk membantu memahami materi praktikum, memeriksa kode program, dan membantu menyusun dokumentasi.
