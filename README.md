@@ -304,7 +304,7 @@ Kode program, hasil pengamatan, dan tangkapan layar tetap diperiksa berdasarkan 
 
 ## 1. Foto atau Pindaian Lembar Peer Review
 
-Lembar peer review dari Elvira Eri Saputri dapat dilihat melalui tautan berikut:
+Lembar peer review dari peninjau Elvira Eri Saputri:
 
 ![Lihat Screenshot Peer Review](p06-validasi-input/screenshots/peer-review.png)
 
