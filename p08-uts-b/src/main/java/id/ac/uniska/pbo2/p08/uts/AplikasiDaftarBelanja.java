@@ -140,6 +140,7 @@ public class AplikasiDaftarBelanja extends javax.swing.JFrame {
         formPanel.add(tombolPanel, gridBagConstraints);
 
         bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -148,8 +149,6 @@ public class AplikasiDaftarBelanja extends javax.swing.JFrame {
 
         barangTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Pulpen", "Alat Tulis", "RP.3.500", "4", "Rp.14.000"},
-                {"Buku Tulis", "Alat Tulis", "Rp.6.000", "10", null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null}
@@ -204,12 +203,91 @@ public class AplikasiDaftarBelanja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tambahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahButtonActionPerformed
-        // TODO add your handling code here:
+    
+    String nama = namaField.getText().trim();
+    String kategori = kategoriCombo.getSelectedItem().toString();
+
+    if (nama.isEmpty() || hargaField.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this,
+                "Nama dan harga barang harus diisi!");
+        return;
+    }
+
+    try {
+        double harga = Double.parseDouble(hargaField.getText());
+        int jumlah = (Integer) jumlahSpin.getValue();
+
+        if (harga <= 0 || jumlah <= 0) {
+            JOptionPane.showMessageDialog(this,
+                    "Harga dan jumlah harus lebih dari 0!");
+            return;
+        }
+
+        double subtotal = harga * jumlah;
+
+        javax.swing.table.DefaultTableModel model =
+                (javax.swing.table.DefaultTableModel) barangTable.getModel();
+
+        java.text.NumberFormat format =
+                java.text.NumberFormat.getCurrencyInstance(
+                        new java.util.Locale("id", "ID"));
+
+        model.addRow(new Object[]{
+            nama,
+            kategori,
+            format.format(harga),
+            jumlah,
+            format.format(subtotal)
+        });
+
+        JOptionPane.showMessageDialog(this,
+                "Barang berhasil ditambahkan!");
+
+        namaField.setText("");
+        hargaField.setText("");
+        jumlahSpin.setValue(1);
+        namaField.requestFocus();
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this,
+                "Harga harus berupa angka!");
+    }   // TODO add your handling code here:
     }//GEN-LAST:event_tambahButtonActionPerformed
 
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+    namaField.setText("");
+    hargaField.setText("");
+    kategoriCombo.setSelectedIndex(0);
+    jumlahSpin.setValue(1);
+
+    namaField.requestFocus();    // TODO add your handling code here:
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
+
     private void isiContoh() { 
- 
-} 
+
+    javax.swing.table.DefaultTableModel model =
+            (javax.swing.table.DefaultTableModel) barangTable.getModel();
+
+    // Mengosongkan tabel terlebih dahulu
+    model.setRowCount(0);
+
+    model.addRow(new Object[]{
+        "Pulpen", "Alat Tulis", "Rp3.500", 4, "Rp14.000"
+    });
+
+    model.addRow(new Object[]{
+        "Buku Tulis", "Alat Tulis", "Rp6.000", 10, "Rp60.000"
+    });
+
+    model.addRow(new Object[]{
+        "Tas Bekal", "Lainnya", "Rp26.000", 1, "Rp26.000"
+    });
+
+    model.addRow(new Object[]{
+        "Spidol", "Alat Tulis", "Rp12.500", 2, "Rp25.000"
+    });
+}
+
     
     /**
      * @param args the command line arguments
