@@ -432,3 +432,9 @@ Agar tombol Cetak dapat berfungsi, perlu dilakukan perubahan pada `PanelBuku` da
 Pada `PanelBuku`, tambahkan getter `getCetakButton()` agar tombol bisa diakses oleh controller. Selanjutnya, pada `BukuController`, tambahkan event listener untuk menentukan tindakan ketika tombol Cetak ditekan.
 
 Hal ini karena `PanelBuku` bertugas menampilkan komponen, sedangkan `BukuController` bertugas mengatur aksi pengguna dan menghubungkan tampilan dengan pengolahan data.
+
+### Deklarasi Penggunaan AI
+
+Alat yang digunakan: Claude (Anthropic).
+
+Keperluan: memahami modul Praktikum 10, memandu pembuatan proyek p10-mvc-siperpus di NetBeans, memperbaiki error, dan membantu menyusun draf jawaban eksperimen yang kemudian saya periksa sendiri.
