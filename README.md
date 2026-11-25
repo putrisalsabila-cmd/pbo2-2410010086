@@ -393,3 +393,42 @@ Terjadi `NullPointerException` karena model belum dibuat saat `initComponents()`
 ## Deklarasi Penggunaan AI
 
 AI yang digunakan adalah ChatGPT. AI dimanfaatkan untuk membantu memahami materi praktikum, memeriksa kode program, dan membantu menyusun dokumentasi.
+
+
+## Jawaban Eksperimen Praktikum 6
+
+### 1. Mengganti `BukuDaoMemori.denganContoh()` menjadi `new BukuDaoMemori()`
+
+Setelah program dijalankan, tabel buku menjadi kosong dan muncul status **"Menampilkan 0 buku"**. Hal ini karena `denganContoh()` yang sebelumnya digunakan untuk mengisi lima buku contoh sudah tidak dipanggil lagi.
+
+Bagian yang perlu diubah hanya satu baris pada kelas `AplikasiBuku`. Kelas `PanelBuku` dan `BukuController` tidak perlu diubah karena keduanya menggunakan interface `BukuDao`.
+
+### 2. Menambahkan buku dengan kode PBO-001
+
+Saat menekan tombol Simpan, muncul pesan **"Kode PBO-001 sudah dipakai buku lain."** Setelah pesan ditutup, form tambah buku muncul kembali dengan isian sebelumnya.
+
+Hal ini terjadi karena pada method `tambah()` di kelas `BukuController` terdapat perulangan `while (true)`. Perulangan ini membuat form dibuka kembali jika kode buku sudah digunakan, tetapi isian sebelumnya tetap tersimpan. Perulangan akan berhenti jika kode buku sudah benar atau pengguna memilih Batal.
+
+### 3. Memindahkan pemanggilan `dao.hapus` ke dalam `PanelBuku`
+
+Jika pemanggilan `dao.hapus` dipindahkan ke `PanelBuku`, maka kelas tersebut harus mengenal DAO secara langsung.
+
+Hal ini kurang tepat karena tidak sesuai dengan konsep MVC. `PanelBuku` seharusnya hanya bertugas menampilkan data dan menerima aksi pengguna. Sementara itu, proses pengolahan data menjadi tanggung jawab controller.
+
+Dengan begitu, jika penyimpanan data nantinya diganti dari memori ke MySQL, bagian tampilan tidak perlu ikut diubah.
+
+### 4. Menambahkan `List<Buku> stokHabis();` pada interface `BukuDao`
+
+Kelas yang mengalami error saat kompilasi adalah `BukuDaoMemori`.
+
+Penyebabnya karena kelas tersebut menggunakan `implements BukuDao`, sehingga wajib memiliki semua method yang sudah didefinisikan pada interface `BukuDao`. Karena method `stokHabis()` belum dibuat di `BukuDaoMemori`, program mengalami error.
+
+Sementara itu, `BukuController` dan `PanelBuku` tidak langsung mengalami error karena keduanya hanya menggunakan method yang sudah tersedia.
+
+### 5. Menambahkan tombol Cetak ke `tombolPanel` tanpa membuat event
+
+Agar tombol Cetak dapat berfungsi, perlu dilakukan perubahan pada `PanelBuku` dan `BukuController`.
+
+Pada `PanelBuku`, tambahkan getter `getCetakButton()` agar tombol bisa diakses oleh controller. Selanjutnya, pada `BukuController`, tambahkan event listener untuk menentukan tindakan ketika tombol Cetak ditekan.
+
+Hal ini karena `PanelBuku` bertugas menampilkan komponen, sedangkan `BukuController` bertugas mengatur aksi pengguna dan menghubungkan tampilan dengan pengolahan data.
