@@ -394,6 +394,7 @@ Terjadi `NullPointerException` karena model belum dibuat saat `initComponents()`
 
 AI yang digunakan adalah ChatGPT. AI dimanfaatkan untuk membantu memahami materi praktikum, memeriksa kode program, dan membantu menyusun dokumentasi.
 
+# P10 – MVC - SiPerpus
 
 ## Jawaban Eksperimen Praktikum 6
 
